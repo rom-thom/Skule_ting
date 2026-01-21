@@ -1,0 +1,60 @@
+import numpy as np
+import matplotlib.pylab as plt
+
+
+
+# b
+
+
+def X(U, alpha):
+    return np.sqrt(-alpha*np.log(1-U))
+
+
+def test_x(n, alpha):
+    U = np.random.uniform(size=n)
+    x = X(U, alpha)
+        
+    plt.hist(x, bins=100, density=True)
+    plt.show()
+
+    
+# test_x(10_000_000, 1)
+
+def Y():
+    U = np.random.uniform(size=5)
+    x = np.array([X(U[0], 1), X(U[1], 1), X(U[2], 1), X(U[3], 1.2), X(U[4], 1.2)])
+    x.sort()
+    return x[2]
+
+
+
+
+def test_c(n):
+    Y_arr = np.empty(n)
+    for i in range(n):
+        Y_arr[i] = Y()
+      
+    plt.hist(Y_arr, bins=100, density=True)
+    plt.show()
+
+
+def P_Y_big_or_eq_v(v, n):
+    s = 0
+    for _ in range(n):
+        if Y() >= v:
+            s += 1
+    return s/n
+
+
+print(P_Y_big_or_eq_v(1, 100000))
+
+
+# P(Y >= 1 | Y >= 0.75)
+def oppg_c_2(n):
+    return P_Y_big_or_eq_v(1, n)/P_Y_big_or_eq_v(0.75, n)
+
+def oppg_c_3(n):
+    Y_vals = np.zeros(n)
+    for i in range(n):
+        Y_vals[i] = Y()
+    
