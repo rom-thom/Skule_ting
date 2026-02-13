@@ -1,0 +1,22 @@
+
+
+oppg 3. 
+
+    Utan den andre lensa var biletet s_i = 200 mm når objektet var s_o = 200 mm. Frå dette har vi at Magnifiseringa er -1, altså at biletet er invertert
+
+    del 2:
+        Når eg plaserte lensa bak biletet, fekk eg at det nye bildet var 30 mm frå den andre linsa
+
+oppg 4.
+    Når vi har begge linsene og avstanden mellom er 400 mm, er magnifiseringa 0.25/2 = 0.15, og at s_i er ca 29 mm
+
+
+oppg 5.
+    Utrekninga er notert i remarkable. da fekk eg at s_i1 = 200 mm som målt og si_2 = 29.095 mm. Frå utrekningane får vi at M = M_1 * M_2 = 0.145, som er om lag det eg fekk ved å sjå (Krysninga eg såg var ikkje nøyaktig)
+
+
+oppg 6/7.
+    Dersom ein velger ein som har f_1 = 100 mm og ein med f_2 = 85.71 mm som har ein avstand 300 mm ifrå kvarandre og kjelda er ein avstand 200 mm frå nr 1. da blir magnifiseringa 6. Utrekning på remarkable.
+
+oppg 8.
+    Sidan vi brukte den samme som i ein tidlegare oppgåve blir magninfiseringa -1 og s_i = 200 mm når s_o = 200 mm.
