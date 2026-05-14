@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from oppg_1 import impl_newton
+from kyb.gamle_fag.modsim.øving_3.oppg_1 import impl_newton
 from typing import Callable
 
 
