@@ -1,9 +1,9 @@
-
-
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def lagrange_interpolation(x_nodes, y_nodes, x_values):
-    if len(x_nodes != y_nodes):
+    if len(x_nodes) != len(y_nodes):
         raise IndexError("Size of x_nodes and y_nodes should be the same")
     
     n = len(x_nodes) - 1
@@ -27,13 +27,55 @@ def lagrange_interpolation(x_nodes, y_nodes, x_values):
 
 
 
+def equidistant_nodes(node_count = 50):
+    return np.linspace(-1, 1, node_count)
+
+def chubychub_nodes(node_count = 50):
+    count_nr = np.arange(0, node_count)
+    return np.cos(((count_nr+1/2)*np.pi)/(node_count))
+
+def rescale(nodes, start, end):
+    return (end-start)/2 * nodes + (end+start)/2
 
 
 
-x_nodes = [-2, -1, 1, 3]
-y_nodes = [-1, -2, 2, 14]
+
+def runge_func(x_nodes):
+    return 1/(x_nodes**2+1)
 
 
-print(lagrange_interpolation(x_nodes, y_nodes, [0]))    # -1
-print(lagrange_interpolation(x_nodes, y_nodes, [2]))    # 7
-print(lagrange_interpolation(x_nodes, y_nodes, [4]))    # 23
+
+
+def display_interpolation(x_node_func, func, x_node_interval=(-1, 1), node_count=15, label=None, show_nodes=False):
+
+
+    x_nodes = x_node_func(node_count)
+    x_nodes = rescale(x_nodes, x_node_interval[0], x_node_interval[-1])
+    y_nodes = func(x_nodes)
+
+    x_vals = np.linspace(x_nodes[1], x_nodes[-1], 1000)
+    y_interpolation_vals = lagrange_interpolation(x_nodes, y_nodes, x_vals)
+
+    plt.plot(x_vals, y_interpolation_vals, label=label)
+
+    if show_nodes:
+        plt.scatter(x_nodes, y_nodes, label=label)
+
+
+
+def finish_display():
+    plt.legend()
+    plt.grid()
+    plt.show()
+
+
+
+
+
+display_interpolation(chubychub_nodes, runge_func, (-5, 5), label="chebichev", node_count=10, show_nodes=True)
+plt.plot(np.linspace(-5, 5, 1000), runge_func(np.linspace(-5, 5, 1000)), label="real")
+finish_display()
+display_interpolation(equidistant_nodes, runge_func, (-5, 5), label="equidistant", node_count=10, show_nodes=True)
+plt.plot(np.linspace(-5, 5, 1000), runge_func(np.linspace(-5, 5, 1000)), label="real")
+finish_display()
+
