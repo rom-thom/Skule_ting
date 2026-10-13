@@ -89,7 +89,7 @@ def display_error_norm(f, x_interval, node_type, norm, node_counts, label=None):
     for n in node_counts:
         x_nodes = rescale(node_type(n), x_interval[0], x_interval[-1])
 
-        e_norm = error_norm_from_nodes(f, x_nodes, norm, 1000)
+        e_norm = error_norm_from_nodes(f, x_nodes, norm, 100 * n)
         error_norms.append(e_norm)
     plt.plot(node_counts, error_norms, label=label)
     plt.xlabel("node count")

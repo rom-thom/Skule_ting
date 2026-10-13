@@ -1,0 +1,7 @@
+heli_q8_lab2.obj
+heli_q8_lab2_data.obj
+heli_q8_lab2_main.obj
+rtGetInf.obj
+rtGetNaN.obj
+rt_nonfinite.obj
+rt_sim.obj
