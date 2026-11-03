@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">250</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="r" SID="642">
+    <P Name="Position">[0, 108, 30, 122]</P>
+    <P Name="ZOrder">177</P>
+  </Block>
+  <Block BlockType="Inport" Name="x_hat" SID="640">
+    <P Name="Position">[0, 33, 30, 47]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Controller" SID="420">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[300, 26, 405, 144]</P>
+    <P Name="ZOrder">178</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_420"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="x_hat_to_x_lqr" SID="643">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[115, 24, 225, 86]</P>
+    <P Name="ZOrder">179</P>
+    <P Name="BackgroundColor">[1.000000, 0.000000, 1.000000]</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_643"/>
+  </Block>
+  <Block BlockType="Outport" Name="u" SID="641">
+    <P Name="Position">[455, 78, 485, 92]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">420#out:1</P>
+    <P Name="Dst">641#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">642#out:1</P>
+    <P Name="Points">[35, 0]</P>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Points">[0, -45]</P>
+      <P Name="Dst">643#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Dst">420#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">640#out:1</P>
+    <P Name="Dst">643#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">643#out:1</P>
+    <P Name="Dst">420#in:1</P>
+  </Line>
+</System>

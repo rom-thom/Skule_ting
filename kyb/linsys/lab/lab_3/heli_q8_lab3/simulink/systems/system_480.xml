@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 1928, 1168]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">300</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="In1" SID="481">
+    <P Name="Position">[-30, -17, 0, -3]</P>
+    <P Name="ZOrder">176</P>
+  </Block>
+  <Block BlockType="RelationalOperator" Name="Relational&#xA;Operator" SID="482">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[175, -33, 205, -2]</P>
+    <P Name="ZOrder">179</P>
+    <P Name="Operator">==</P>
+    <P Name="InputSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope" SID="483">
+    <P Name="Ports">[2]</P>
+    <P Name="Position">[185, 46, 215, 79]</P>
+    <P Name="ZOrder">181</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;ScopeData9&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-4.7925&apos;,&apos;MaxYLimReal&apos;,&apos;0.5325&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;4.7925&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,2,&apos;LineNames&apos;,{{&apos;In1&apos;,&apos;Unit Delay&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;MinYLimReal&apos;,&apos;-4.7925&apos;,&apos;MaxYLimReal&apos;,&apos;0.5325&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;4.7925&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;PreviousAutoscale&apos;,&apos;XY&apos;),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2015b&apos;)),&apos;Version&apos;,&apos;2015b&apos;,&apos;Position&apos;,[2004 652 560 420])</P>
+    <P Name="NumInputPorts">2</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="UnitDelay" Name="Unit Delay" SID="484">
+    <P Name="Position">[70, 23, 105, 57]</P>
+    <P Name="ZOrder">175</P>
+    <P Name="InitialCondition">NaN</P>
+    <P Name="SampleTime">-1</P>
+    <P Name="HasFrameUpgradeWarning">on</P>
+  </Block>
+  <Block BlockType="Outport" Name="is equal" SID="485">
+    <P Name="Position">[320, -22, 350, -8]</P>
+    <P Name="ZOrder">177</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">481#out:1</P>
+    <P Name="Points">[25, 0]</P>
+    <Branch>
+      <P Name="ZOrder">2</P>
+      <P Name="Points">[0, 50]</P>
+      <P Name="Dst">484#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Points">[0, -15; 124, 0]</P>
+      <Branch>
+        <P Name="ZOrder">4</P>
+        <P Name="Points">[0, 80]</P>
+        <P Name="Dst">483#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">5</P>
+        <P Name="Dst">482#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">484#out:1</P>
+    <P Name="Points">[28, 0]</P>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Points">[0, -50]</P>
+      <P Name="Dst">482#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Points">[0, 30]</P>
+      <P Name="Dst">483#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">482#out:1</P>
+    <P Name="Dst">485#in:1</P>
+  </Line>
+</System>

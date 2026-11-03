@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">250</P>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">728</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="SubSystem" Name="Controller_tot" SID="639">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[95, 236, 275, 369]</P>
+    <P Name="ZOrder">106</P>
+    <P Name="BackgroundColor">[0.929412, 0.694118, 0.125490]</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_639"/>
+  </Block>
+  <Block BlockType="Reference" Name="HIL Initialize" SID="23">
+    <P Name="Ports">[]</P>
+    <P Name="Position">[295, 49, 379, 124]</P>
+    <P Name="ZOrder">-18</P>
+    <P Name="Priority">-99</P>
+    <P Name="AttributesFormatString">%&lt;object_name&gt; (%&lt;board_type&gt;-%&lt;board_number&gt;)</P>
+    <P Name="LibraryVersion">1.2068</P>
+    <P Name="UserDataPersistent">on</P>
+    <P Name="UserData" Ref="bdmxdata:UserData_23"/>
+    <P Name="SourceBlock">quarc_library/Data Acquisition/Generic/Configuration/HIL Initialize</P>
+    <P Name="SourceType">HIL Initialize</P>
+    <P Name="SourceProductName">QUARC Targets</P>
+    <InstanceData>
+      <P Name="MultiThreadCoSim">auto</P>
+      <P Name="object_name">HIL-1</P>
+      <P Name="board_type">q8_usb</P>
+      <P Name="board_number">0</P>
+      <P Name="board_options">update_rate=normal;decimation=1</P>
+      <P Name="exclusive">off</P>
+      <P Name="active">off</P>
+      <P Name="hardware_clocks">[0:2]</P>
+      <P Name="clock_modes">[]</P>
+      <P Name="initial_clock_frequencies">[]</P>
+      <P Name="set_clock_params_at_start">off</P>
+      <P Name="set_clock_params_at_switch_in">off</P>
+      <P Name="set_clock_frequencies_at_start">off</P>
+      <P Name="set_clock_frequencies_at_switch_in">off</P>
+      <P Name="analog_input_channels">[0:7]</P>
+      <P Name="analog_input_configurations">[]</P>
+      <P Name="analog_input_maximums">10</P>
+      <P Name="analog_input_minimums">-10</P>
+      <P Name="set_analog_input_params_at_start">on</P>
+      <P Name="set_analog_input_params_at_switch_in">off</P>
+      <P Name="analog_output_channels">[0:7]</P>
+      <P Name="analog_output_maximums">10</P>
+      <P Name="analog_output_minimums">-10</P>
+      <P Name="initial_analog_outputs">[0]</P>
+      <P Name="final_analog_outputs">[0]</P>
+      <P Name="watchdog_analog_outputs">0</P>
+      <P Name="set_analog_output_params_at_start">on</P>
+      <P Name="set_analog_output_params_at_switch_in">off</P>
+      <P Name="set_analog_outputs_at_start">on</P>
+      <P Name="set_analog_outputs_at_switch_in">off</P>
+      <P Name="set_analog_outputs_at_terminate">on</P>
+      <P Name="set_analog_outputs_at_switch_out">off</P>
+      <P Name="set_analog_outputs_on_watchdog">off</P>
+      <P Name="digital_input_channels">[]</P>
+      <P Name="digital_output_channels">[]</P>
+      <P Name="digital_output_configuration">[]</P>
+      <P Name="initial_digital_outputs">[1]</P>
+      <P Name="final_digital_outputs">[1]</P>
+      <P Name="watchdog_digital_outputs">[1]</P>
+      <P Name="set_digital_output_params_at_start">off</P>
+      <P Name="set_digital_output_params_at_switch_in">off</P>
+      <P Name="set_digital_outputs_at_start">on</P>
+      <P Name="set_digital_outputs_at_switch_in">off</P>
+      <P Name="set_digital_outputs_at_terminate">on</P>
+      <P Name="set_digital_outputs_at_switch_out">off</P>
+      <P Name="set_digital_outputs_on_watchdog">off</P>
+      <P Name="encoder_channels">[0:7]</P>
+      <P Name="quadrature">[4]</P>
+      <P Name="encoder_filter_frequency">[]</P>
+      <P Name="initial_encoder_counts">[0]</P>
+      <P Name="set_encoder_params_at_start">on</P>
+      <P Name="set_encoder_params_at_switch_in">off</P>
+      <P Name="set_encoder_counts_at_start">on</P>
+      <P Name="set_encoder_counts_at_switch_in">off</P>
+      <P Name="pwm_channels">[0:7]</P>
+      <P Name="pwm_modes">0</P>
+      <P Name="pwm_frequency">99.532799999999995e6/4095</P>
+      <P Name="pwm_configuration">[0]</P>
+      <P Name="pwm_alignment">[0]</P>
+      <P Name="pwm_polarity">[1]</P>
+      <P Name="pwm_leading_deadband">[0]</P>
+      <P Name="pwm_trailing_deadband">[0]</P>
+      <P Name="initial_pwm_outputs">[0]</P>
+      <P Name="final_pwm_outputs">[0]</P>
+      <P Name="watchdog_pwm_outputs">[0]</P>
+      <P Name="set_pwm_params_at_start">on</P>
+      <P Name="set_pwm_params_at_switch_in">off</P>
+      <P Name="set_pwm_outputs_at_start">on</P>
+      <P Name="set_pwm_outputs_at_switch_in">off</P>
+      <P Name="set_pwm_outputs_at_terminate">on</P>
+      <P Name="set_pwm_outputs_at_switch_out">off</P>
+      <P Name="set_pwm_outputs_on_watchdog">off</P>
+      <P Name="other_output_channels">[]</P>
+      <P Name="initial_other_outputs">[]</P>
+      <P Name="final_other_outputs">[]</P>
+      <P Name="watchdog_other_outputs">[]</P>
+      <P Name="set_other_outputs_at_start">off</P>
+      <P Name="set_other_outputs_at_switch_in">off</P>
+      <P Name="set_other_outputs_at_terminate">off</P>
+      <P Name="set_other_outputs_at_switch_out">off</P>
+      <P Name="set_other_outputs_on_watchdog">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="SubSystem" Name="Helli_tot" SID="592">
+    <P Name="Ports">[1, 2]</P>
+    <P Name="Position">[365, 228, 555, 377]</P>
+    <P Name="ZOrder">103</P>
+    <P Name="BackgroundColor">green</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_592"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Luenberger observer" SID="622">
+    <P Name="Ports">[2, 2]</P>
+    <P Name="Position">[90, 436, 280, 570]</P>
+    <P Name="ZOrder">104</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="BackgroundColor">lightBlue</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;,&quot;Out2&quot;,&quot;In2&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;90bc4f52-2a8d-4b04-a32e-5e288cb35c55&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;Out1&quot;],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;6fa03f99-c9f5-4bc2-b81c-410ea789d71d&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;9b9bb54b-f534-43e0-8e1a-db097f428d4e&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;HIDDEN&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;fd4dc44a-fa38-4ba6-b0f2-541959644f4b&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;788dc20b-51a4-44fe-9c39-d7068626faea&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <System Ref="system_622"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Scope_sys" SID="674">
+    <P Name="Ports">[5]</P>
+    <P Name="Position">[405, 448, 545, 532]</P>
+    <P Name="ZOrder">107</P>
+    <P Name="BackgroundColor">[1.000000, 1.000000, 0.000000]</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;,&quot;In2&quot;,&quot;In3&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;313e41c6-1699-4276-a3bb-5a32ee0b9fca&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In4&quot;,&quot;In5&quot;],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;6fdf199b-c2c3-4ea0-8067-f6943e7ab2ed&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;3aee3b20-1aaa-431d-9f7f-06990d9deedf&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;HIDDEN&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;19f6a24c-7a96-4d9e-9723-a456821efb6b&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;75e2d722-3d53-4117-afad-04bf50c5c9ab&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <System Ref="system_674"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="reference" SID="633">
+    <P Name="Ports">[0, 1]</P>
+    <P Name="Position">[-120, 241, -60, 299]</P>
+    <P Name="ZOrder">105</P>
+    <P Name="BackgroundColor">[0.635294, 0.078431, 0.184314]</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_633"/>
+  </Block>
+  <Line>
+    <P Name="ZOrder">657</P>
+    <P Name="Src">592#out:1</P>
+    <P Name="Points">[126, 0; 0, 245]</P>
+    <Branch>
+      <P Name="ZOrder">676</P>
+      <P Name="Dst">674#in:5</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">675</P>
+      <P Name="Points">[0, 40]</P>
+      <P Name="Dst">622#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">659</P>
+    <P Name="Src">622#out:1</P>
+    <P Name="Points">[0, -170]</P>
+    <P Name="Dst">639#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">660</P>
+    <P Name="Src">633#out:1</P>
+    <P Name="Points">[78, 0]</P>
+    <Branch>
+      <P Name="ZOrder">673</P>
+      <P Name="Dst">639#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">672</P>
+      <P Name="Points">[0, 329; 330, 0; 0, -79]</P>
+      <P Name="Dst">674#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">661</P>
+    <P Name="Src">639#out:1</P>
+    <P Name="Points">[51, 0]</P>
+    <Branch>
+      <P Name="ZOrder">666</P>
+      <P Name="Points">[0, 155]</P>
+      <Branch>
+        <P Name="ZOrder">668</P>
+        <P Name="Dst">674#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">667</P>
+        <P Name="Dst">622#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">662</P>
+      <P Name="Dst">592#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">669</P>
+    <P Name="Src">622#out:2</P>
+    <P Name="Points">[37, 0; 0, -15]</P>
+    <P Name="Dst">674#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">674</P>
+    <P Name="Src">592#out:2</P>
+    <P Name="Points">[43, 0; 0, 130]</P>
+    <P Name="Dst">674#in:4</P>
+  </Line>
+</System>

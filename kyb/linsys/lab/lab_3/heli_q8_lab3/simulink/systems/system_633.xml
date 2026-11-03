@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">250</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Gain" Name="Gain" SID="637">
+    <P Name="Position">[-35, 80, -5, 110]</P>
+    <P Name="ZOrder">29</P>
+    <P Name="Gain">-1</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Joystick" SID="208">
+    <P Name="Ports">[0, 2]</P>
+    <P Name="Position">[-155, 21, -105, 119]</P>
+    <P Name="ZOrder">27</P>
+    <P Name="BackgroundColor">gray</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_208"/>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="636">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[40, 21, 55, 119]</P>
+    <P Name="ZOrder">28</P>
+    <P Name="Inputs">2</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Outport" Name="r" SID="635">
+    <P Name="Position">[95, 63, 125, 77]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">636#out:1</P>
+    <P Name="Dst">635#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">208#out:2</P>
+    <P Name="Dst">637#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">637#out:1</P>
+    <P Name="Dst">636#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">208#out:1</P>
+    <P Name="Dst">636#in:1</P>
+  </Line>
+</System>

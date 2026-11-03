@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">200</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="angles" SID="660">
+    <P Name="Position">[85, -202, 115, -188]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Inport" Name="angle_rates" SID="662">
+    <P Name="Position">[105, -92, 135, -78]</P>
+    <P Name="ZOrder">177</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux1" SID="654">
+    <P Name="Ports">[1, 2]</P>
+    <P Name="Position">[165, -214, 170, -176]</P>
+    <P Name="ZOrder">199</P>
+    <P Name="Outputs">2</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux2" SID="655">
+    <P Name="Ports">[1, 3]</P>
+    <P Name="Position">[175, -114, 185, -56]</P>
+    <P Name="ZOrder">200</P>
+    <P Name="Outputs">3</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="656">
+    <P Name="Ports">[5, 1]</P>
+    <P Name="Position">[395, -160, 405, -50]</P>
+    <P Name="ZOrder">201</P>
+    <P Name="Inputs">5</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Outport" Name="x_m" SID="661">
+    <P Name="Position">[505, -112, 535, -98]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">655#out:3</P>
+    <P Name="Dst">656#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">654#out:1</P>
+    <P Name="Points">[120, 0; 0, 60]</P>
+    <P Name="Dst">656#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">662#out:1</P>
+    <P Name="Dst">655#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">655#out:2</P>
+    <P Name="Dst">656#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">654#out:2</P>
+    <P Name="Points">[70, 0; 0, 80]</P>
+    <P Name="Dst">656#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">655#out:1</P>
+    <P Name="Points">[25, 0; 0, -20]</P>
+    <P Name="Dst">656#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">656#out:1</P>
+    <P Name="Dst">661#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">660#out:1</P>
+    <P Name="Dst">654#in:1</P>
+  </Line>
+</System>

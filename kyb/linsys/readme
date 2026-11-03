@@ -1,0 +1,99 @@
+# TTK4115 – helikopterlab
+
+Arbeidsfilene er samla i `lab/`. Køyr MATLAB med den aktuelle labmappa som
+Current Folder, og køyr initieringsskriptet før du opnar eller byggjer modellen.
+Modellane bruker QUARC og tilhøyrande maskinvareoppsett.
+
+```text
+lab/
+├── dokumentasjon/   Oppgåver, førebuing og MATLAB/Simulink-guide
+├── common/          Felles initieringsskript og grunnmodellar
+├── lab_1/           Lab 1-modell, initiering, plotteskript og måledata
+│   └── data/        Utmappe for nye opptak frå lab 1-modellen
+├── lab_2/           Lab 2-modell, initiering, plotteskript, måledata og prep_2.py
+├── lab_3/           Den nyaste tilgjengelege lab 3-modellen og initieringa
+├── lab_4/           Lab 4-modell, initiering, Kalman-funksjonar og måledata
+└── arkiv/           Tidlegare variantar, autosave og flytteloggar
+```
+
+## Kva skal opnast?
+
+| Mappe | Køyr først | Modell |
+| --- | --- | --- |
+| `lab/lab_1` | `init_heli_1_2_lab1.m` | `heli_q8_lab1.slx` |
+| `lab/lab_2` | `init_heli_1_2_lab2.m` | `heli_q8_lab2.slx` |
+| `lab/lab_3` | `init_heli_1_2_lab3.m` | `heli_q8_lab3.slx` |
+| `lab/lab_4` | `init_heli_1_2_lab4.m` | `heli_q8_lab4.slx` |
+
+Lab 3-modellen kjem frå den tidlegare `ny/LinSyssLab/lab3`-mappa og har intern
+lagringsdato 13. oktober 2026. `IMU_heli_1_2.slx` ligg òg her som støttemodell.
+Initieringsskripta ovanfor er for helikopter 1–2. Variantane for helikopter
+3–10 ligg i `common`; vel kalibrering som passar utstyret.
+
+For lab 4, start frå prosjektrota (`linsys`) og køyr:
+
+```matlab
+cd lab/lab_4
+init_heli_1_2_lab4
+open_system('heli_q8_lab4')
+```
+
+Bygg og start deretter modellen med QUARC på lab-PC-en. Initieringa les
+`y_air.mat` og `y_ground.mat` frå denne mappa for å rekne ut kovariansar.
+Modellen har Kalman-funksjonane innebygde i MATLAB Function-blokker.
+Dei separate filene i `kalman_functions/` er òg bevarte; dersom du skal
+kalle desse direkte, køyr `addpath('kalman_functions')` frå `lab/lab_4`.
+
+## Måledata og plotting
+
+- Lab 1: `plot_data.m` les `data5.mat` frå labmappa. Dei seks opphavlege
+  måleseriane `data1.mat`–`data6.mat` ligg saman med skriptet. Modellen har
+  opptakssti `data/data5.mat`; undermappa `data/` er oppretta for denne.
+  Ho inneheld no òg opptaket som kom med den importerte `lab_`-mappa.
+  For å plotte eit nytt opptak må lastestien i plotteskriptet tilpassast.
+- Lab 2: `plot_data.m` les `LQR_alle_1.mat` frå labmappa. Modellen har
+  opptaksnamnet `LQR_q3_10_elevation_rate_focus.mat`, som òg finst som eldre
+  måledata. Vel eit nytt opptaksnamn i modellen dersom desse skal bevarast.
+- Den eldre lab 3-målinga med namnet `LQR_q3_10_elevation_rate_focus.mat`
+  ligg i `arkiv/lab_3_tidlegare`. Ho har anna innhald enn fila i `lab_2`.
+- `prep_2.py` er bevart i `lab_2` frå den tidlegare mappa med same namn.
+  Skriptet undersøkjer observerbarheit og bruker NumPy.
+
+## Arkiv og opphav
+
+- `arkiv/lab_3_tidlegare/`: dei eldre modellane `heli_q8_lab2.slx` og
+  `simulink_with_scopes.slx`, tilhøyrande initiering, IMU-modell, måling og
+  plotteskript frå `lab/lab_3/drive-download-20261013T094507Z-1-001 (2)`.
+  Det gamle plotteskriptet viser til `LQR_alle_1.mat`, som ligg i `lab/lab_2`;
+  denne referansen var slik før oppryddinga og er ikkje endra.
+- `arkiv/autosave/`: MATLAB-autosave frå lab 2. Lab 3-autosave ligg saman
+  med dei eldre lab 3-filene.
+- `arkiv/eldre_format/`: modellkopiar med suffiksa `.slx.r2015b` og `.slx.r2020b`.
+- `arkiv/lab_2_fra_lab_2026-11-03/`: lab 2-modellen og målinga
+  `LQR_q3_10_elevation_rate_focus.mat` frå den importerte `lab_`-mappa.
+  Desse skil seg frå dei eksisterande filene i `lab_2`, så begge variantane
+  er bevarte. Den importerte modellen har intern lagringsdato 2. november
+  2026; arbeidsmodellen i `lab_2` er framleis den eksisterande varianten.
+- `arkiv/flyttelogg.json`: opphavleg sti, ny sti og SHA-256 for alle dei
+  314 filene frå oppryddinga 2. november. Dette er ein historisk logg;
+  byggfilene han viser til vart fjerna ved neste opprydding.
+- `arkiv/flyttelogg_2026-11-03.json`: logg over samanslåinga av `lab/lab_`
+  med `lab`, med sjekksummar, nye stiar og oversikt over sletta byggfiler.
+
+Ved oppryddinga 2. november 2026 vart 16 identiske dobbeltkopiar samla,
+og alt opphavleg filinnhald vart kontrollert med SHA-256.
+Enkelte like filer er medvite haldne både i `common` og i ei labmappe eller
+arkivet for å halde dei aktuelle filsetta samla.
+Dei gamle mappene `ny`, `lab/TTK4115` og `lab/lab_software` er avvikla.
+
+3. november 2026 vart den nye `lab/lab_`-mappa slått saman med `lab`.
+Lab 4 og det nye lab 1-opptaket vart flytta inn, og 110 identiske
+dobbeltkopiar vart samla. Alt innhald utanom genererte byggfiler er bevart
+og kontrollert med SHA-256, inkludert autosave og dei utpakka lab 3-filene.
+861 genererte filer (om lag 29 MB) vart fjerna: innhald i `slprj/` og
+`*_quarc_win64/`, samt `.slxc` og `.rt-win64`. Dette inkluderer det gamle
+byggarkivet. Modellane må byggjast på nytt ved neste køyring.
+
+MATLAB-skript og Simulink-modellar er ikkje endra eller køyrde under oppryddinga.
+Legg berre den aktuelle arbeidsmappa på MATLAB-stien; ikkje legg heile
+arkivet på stien, sidan det inneheld eldre filer med same namn.

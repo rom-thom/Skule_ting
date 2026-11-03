@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="SubSystem" Name="Check if equal" SID="468">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1330, 807, 1400, 823]</P>
+    <P Name="ZOrder">192</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_468"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Check if equal1" SID="474">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1330, 842, 1400, 858]</P>
+    <P Name="ZOrder">235</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_474"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Check if equal2" SID="480">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1330, 877, 1400, 893]</P>
+    <P Name="ZOrder">236</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_480"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Check if equal3" SID="486">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1330, 912, 1400, 928]</P>
+    <P Name="ZOrder">237</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_486"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Check if equal4" SID="492">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1330, 947, 1400, 963]</P>
+    <P Name="ZOrder">238</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_492"/>
+  </Block>
+  <Block BlockType="SubSystem" Name="Check if equal5" SID="498">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1330, 982, 1400, 998]</P>
+    <P Name="ZOrder">239</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_498"/>
+  </Block>
+  <Block BlockType="Scope" Name="Closed" SID="504">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[975, 741, 1010, 789]</P>
+    <P Name="ZOrder">205</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData1&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Scope" Name="Connected2" SID="505">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[315, 439, 345, 471]</P>
+    <P Name="ZOrder">207</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData2&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Constant" Name="Constant4" SID="506">
+    <P Name="Position">[60, 425, 90, 455]</P>
+    <P Name="ZOrder">209</P>
+    <P Name="Value">0</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Copyright" SID="507">
+    <P Name="Ports">[]</P>
+    <P Name="Position">[625, 144, 769, 157]</P>
+    <P Name="ZOrder">194</P>
+    <P Name="ShowName">off</P>
+    <P Name="OpenFcn">web(&apos;http://www.quanser.com/&apos;);</P>
+    <P Name="Permissions">NoReadOrWrite</P>
+    <P Name="PermitHierarchicalResolution">None</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display IconFrame="off">text(0, 0, copyright_str, ...
+    &apos;horizontalAlignment&apos;, &apos;left&apos;, ...
+    &apos;verticalAlignment&apos;, &apos;bottom&apos;);</Display>
+      <Initialization>copyright_str = [&apos;Copyright (c) &apos;, datestr(date, &apos;yyyy&apos;), &apos; Quanser Inc.&apos;];</Initialization>
+    </Mask>
+    <System Ref="system_507"/>
+  </Block>
+  <Block BlockType="DataTypeConversion" Name="Data Type Conversion1" SID="508">
+    <P Name="Position">[1265, 348, 1340, 382]</P>
+    <P Name="ZOrder">213</P>
+    <P Name="OutDataTypeStr">double</P>
+    <P Name="RndMeth">Floor</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="DataTypeConversion" Name="Data Type Conversion2" SID="509">
+    <P Name="Position">[1265, 408, 1340, 442]</P>
+    <P Name="ZOrder">214</P>
+    <P Name="OutDataTypeStr">double</P>
+    <P Name="RndMeth">Floor</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux3" SID="510">
+    <P Name="Ports">[1, 3]</P>
+    <P Name="Position">[1620, 498, 1625, 632]</P>
+    <P Name="ZOrder">221</P>
+    <P Name="ShowName">off</P>
+    <P Name="Outputs">3</P>
+  </Block>
+  <Block BlockType="Demux" Name="Demux4" SID="511">
+    <P Name="Ports">[1, 3]</P>
+    <P Name="Position">[1620, 648, 1625, 782]</P>
+    <P Name="ZOrder">222</P>
+    <P Name="ShowName">off</P>
+    <P Name="Outputs">3</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Double-click here&#xA;for instructions" SID="512">
+    <P Name="Ports">[]</P>
+    <P Name="Position">[305, 265, 328, 285]</P>
+    <P Name="ZOrder">203</P>
+    <P Name="DropShadow">on</P>
+    <P Name="OpenFcn">qc_show_demo(&apos;quarc_serial_interfacing_text_demo&apos;);</P>
+    <P Name="Permissions">NoReadOrWrite</P>
+    <P Name="PermitHierarchicalResolution">None</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <Mask>
+      <Display>disp(&apos;?&apos;)</Display>
+    </Mask>
+    <System Ref="system_512"/>
+  </Block>
+  <Block BlockType="Gain" Name="Gain1" SID="513">
+    <P Name="Position">[1585, 157, 1730, 283]</P>
+    <P Name="ZOrder">197</P>
+    <P Name="Gain">[ 0, 0, 1; 0, 1, 0; -1, 0, 0]</P>
+    <P Name="Multiplication">Matrix(K*u) (u vector)</P>
+  </Block>
+  <Block BlockType="Gain" Name="Gain2" SID="514">
+    <P Name="Position">[1595, 15, 1745, 145]</P>
+    <P Name="ZOrder">198</P>
+    <P Name="Gain">[ 0, 0, 1; 0, 1, 0; -1, 0, 0]</P>
+    <P Name="Multiplication">Matrix(K*u) (u vector)</P>
+  </Block>
+  <Block BlockType="Logic" Name="Logical&#xA;Operator" SID="515">
+    <P Name="Ports">[6, 1]</P>
+    <P Name="Position">[1530, 791, 1560, 1014]</P>
+    <P Name="ZOrder">233</P>
+    <P Name="Inputs">6</P>
+    <P Name="AllPortsSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+  </Block>
+  <Block BlockType="Logic" Name="Logical&#xA;Operator1" SID="516">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[1660, 889, 1690, 921]</P>
+    <P Name="ZOrder">240</P>
+    <P Name="Operator">NOT</P>
+    <P Name="AllPortsSameDT">off</P>
+    <P Name="OutDataTypeStr">boolean</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux3" SID="517">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[1140, 346, 1145, 384]</P>
+    <P Name="ZOrder">211</P>
+    <P Name="ShowName">off</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Mux" Name="Mux4" SID="518">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[1140, 406, 1145, 444]</P>
+    <P Name="ZOrder">212</P>
+    <P Name="ShowName">off</P>
+    <P Name="Inputs">3</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Scope" Name="Scope" SID="519">
+    <P Name="Ports">[6]</P>
+    <P Name="Position">[1640, 1011, 1690, 1154]</P>
+    <P Name="ZOrder">234</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData4&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">6</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="Skip to&#xA;next line" SID="520">
+    <P Name="Ports">[1, 0, 1]</P>
+    <P Name="Position">[1080, 589, 1180, 631]</P>
+    <P Name="ZOrder">201</P>
+    <P Name="TreatAsAtomicUnit">on</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_520"/>
+  </Block>
+  <Block BlockType="Reference" Name="Stop with Error" SID="530">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[265, 505, 335, 575]</P>
+    <P Name="ZOrder">244</P>
+    <P Name="LibraryVersion">1.2068</P>
+    <P Name="SourceBlock">quarc_library/Sinks/Error Handling/Stop with Error</P>
+    <P Name="SourceType">Stop with Error</P>
+    <P Name="SourceProductName">QUARC Targets</P>
+    <InstanceData>
+      <P Name="MultiThreadCoSim">auto</P>
+      <P Name="message_type">Interpret input as error code</P>
+      <P Name="message">Error occurred</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Stream Call2" SID="531">
+    <P Name="Ports">[2, 3]</P>
+    <P Name="Position">[135, 408, 235, 472]</P>
+    <P Name="ZOrder">208</P>
+    <P Name="LibraryVersion">1.2068</P>
+    <P Name="SourceBlock">quarc_library/Communications/Intermediate/Stream Call</P>
+    <P Name="SourceType">Stream Call</P>
+    <P Name="SourceProductName">QUARC Targets</P>
+    <InstanceData>
+      <P Name="MultiThreadCoSim">auto</P>
+      <P Name="uri_source">External input port</P>
+      <P Name="uri">serial://IMU:9?baud=115200,word=8,parity=none,stop=1,flow=&apos;none&apos;</P>
+      <P Name="apply_uri_to_all_configs">on</P>
+      <P Name="send_buffer_size">8000</P>
+      <P Name="receive_buffer_size">8000</P>
+      <P Name="byte_order">little endian (Intel - LSB first)</P>
+      <P Name="sample_time">qc_get_step_size</P>
+      <P Name="non_blocking">on</P>
+      <P Name="active">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="Stream Formatted&#xA;Read1" SID="532">
+    <P Name="Ports">[1, 12]</P>
+    <P Name="Position">[505, 314, 625, 666]</P>
+    <P Name="ZOrder">199</P>
+    <P Name="LibraryVersion">1.2068</P>
+    <P Name="SourceBlock">quarc_library/Communications/Intermediate/Stream Formatted
+Read</P>
+    <P Name="SourceType">Stream Formatted Read</P>
+    <P Name="SourceProductName">QUARC Targets</P>
+    <InstanceData>
+      <P Name="MultiThreadCoSim">auto</P>
+      <P Name="format_string"> :%f,%f,%f,%f,%f,%f\r</P>
+      <P Name="max_code_units">80</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Reference" Name="String Constant1" SID="533">
+    <P Name="Ports">[0, 1]</P>
+    <P Name="Position">[15, 494, 100, 556]</P>
+    <P Name="ZOrder">210</P>
+    <P Name="AttributesFormatString">&quot;serial://IMU:3?baud=115200,word=8,parity=none,stop=1&quot;</P>
+    <P Name="LibraryVersion">1.2068</P>
+    <P Name="SourceBlock">quarc_library/Strings/String Constant</P>
+    <P Name="SourceType">String Constant</P>
+    <P Name="SourceProductName">QUARC Targets</P>
+    <InstanceData>
+      <P Name="MultiThreadCoSim">auto</P>
+      <P Name="string_value">qc_perform_substitutions(&apos;serial://IMU:%{PORT}?baud=115200,word=8,parity=none,stop=1&apos;)</P>
+      <P Name="evaluate_string">on</P>
+      <P Name="string_type">URI</P>
+      <P Name="max_length">255</P>
+      <P Name="sample_time">inf</P>
+      <P Name="variable_size">off</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator" SID="534">
+    <P Name="Position">[650, 525, 670, 545]</P>
+    <P Name="ZOrder">241</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator1" SID="535">
+    <P Name="Position">[650, 555, 670, 575]</P>
+    <P Name="ZOrder">242</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator2" SID="536">
+    <P Name="Position">[650, 645, 670, 665]</P>
+    <P Name="ZOrder">243</P>
+  </Block>
+  <Block BlockType="Scope" Name="ax" SID="537">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1705, 489, 1735, 521]</P>
+    <P Name="ZOrder">215</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData5&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Scope" Name="ay" SID="538">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1705, 549, 1735, 581]</P>
+    <P Name="ZOrder">216</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData7&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Scope" Name="az" SID="539">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1705, 599, 1735, 631]</P>
+    <P Name="ZOrder">217</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData9&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Scope" Name="wx" SID="540">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1705, 654, 1735, 686]</P>
+    <P Name="ZOrder">218</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData13&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Scope" Name="wy" SID="541">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1705, 714, 1735, 746]</P>
+    <P Name="ZOrder">219</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData15&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Scope" Name="wz" SID="542">
+    <P Name="Ports">[1]</P>
+    <P Name="Position">[1705, 764, 1735, 796]</P>
+    <P Name="ZOrder">220</P>
+    <P Name="ScopeSpecificationString">C++SS(StrPVP(&apos;SaveName&apos;,&apos;ScopeData17&apos;),StrPVP(&apos;LimitDataPoints&apos;,&apos;on&apos;),StrPVP(&apos;DataFormat&apos;,&apos;Array&apos;),StrPVP(&apos;Decimation&apos;,&apos;1&apos;),StrPVP(&apos;BlockParamSampleInput&apos;,&apos;off&apos;))</P>
+    <P Name="NumInputPorts">1</P>
+    <P Name="Floating">off</P>
+  </Block>
+  <Block BlockType="Outport" Name="accelerometer, m/s^2" SID="543">
+    <P Name="Position">[1795, 213, 1825, 227]</P>
+    <P Name="ZOrder">193</P>
+  </Block>
+  <Block BlockType="Outport" Name="gyroscope, rad/s" SID="544">
+    <P Name="Position">[1795, 263, 1825, 277]</P>
+    <P Name="ZOrder">195</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Outport" Name="New data, 0/1" SID="545">
+    <P Name="Position">[1810, 898, 1840, 912]</P>
+    <P Name="ZOrder">196</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">513#out:1</P>
+    <P Name="Points">[15, 0; 0, 50]</P>
+    <P Name="Dst">544#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">514#out:1</P>
+    <P Name="Points">[20, 0; 0, 140]</P>
+    <P Name="Dst">543#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">532#out:1</P>
+    <P Name="Points">[360, 0; 0, 285]</P>
+    <P Name="Dst">520#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">531#out:1</P>
+    <P Name="Points">[165, 0; 0, 98; 84, 0; 0, -28]</P>
+    <P Name="Dst">532#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">506#out:1</P>
+    <P Name="Points">[25, 0]</P>
+    <P Name="Dst">531#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">533#out:1</P>
+    <P Name="Points">[13, 0; 0, -70]</P>
+    <P Name="Dst">531#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">531#out:2</P>
+    <P Name="Points">[35, 0; 0, 15]</P>
+    <P Name="Dst">505#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">8</P>
+    <P Name="Src">532#out:10</P>
+    <P Name="Points">[321, 0; 0, -41; 179, 0]</P>
+    <P Name="Dst">520#enable</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">532#out:2</P>
+    <P Name="Points">[485, 0]</P>
+    <Branch>
+      <P Name="ZOrder">10</P>
+      <P Name="Points">[0, 156; 174, 0; 0, 304]</P>
+      <P Name="Dst">468#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">11</P>
+      <P Name="Dst">517#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">532#out:3</P>
+    <P Name="Points">[253, 0; 0, -20; 225, 0]</P>
+    <Branch>
+      <P Name="ZOrder">13</P>
+      <P Name="Points">[0, 163; 202, 0; 0, 322]</P>
+      <P Name="Dst">474#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">14</P>
+      <P Name="Dst">517#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">532#out:4</P>
+    <P Name="Points">[0, -40; 455, 0]</P>
+    <Branch>
+      <P Name="ZOrder">16</P>
+      <P Name="Points">[0, 20; 109, 0; 0, 490]</P>
+      <P Name="Dst">480#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">17</P>
+      <P Name="Dst">517#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">532#out:5</P>
+    <P Name="Points">[253, 0; 0, -30; 151, 0]</P>
+    <Branch>
+      <P Name="ZOrder">19</P>
+      <P Name="Points">[0, 505]</P>
+      <P Name="Dst">486#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">20</P>
+      <P Name="Dst">518#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">532#out:6</P>
+    <P Name="Points">[392, 0]</P>
+    <Branch>
+      <P Name="ZOrder">22</P>
+      <P Name="Points">[0, 480]</P>
+      <P Name="Dst">492#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">23</P>
+      <P Name="Points">[43, 0; 0, -50]</P>
+      <P Name="Dst">518#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">24</P>
+    <P Name="Src">532#out:7</P>
+    <P Name="Points">[386, 0]</P>
+    <Branch>
+      <P Name="ZOrder">25</P>
+      <P Name="Points">[0, 485]</P>
+      <P Name="Dst">498#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">26</P>
+      <P Name="Points">[68, 0; 0, -70]</P>
+      <P Name="Dst">518#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">27</P>
+    <P Name="Src">532#out:11</P>
+    <P Name="Points">[325, 0; 0, 140]</P>
+    <P Name="Dst">504#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">28</P>
+    <P Name="Src">508#out:1</P>
+    <P Name="Points">[112, 0]</P>
+    <Branch>
+      <P Name="ZOrder">29</P>
+      <P Name="Points">[0, 200]</P>
+      <P Name="Dst">510#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">30</P>
+      <P Name="Points">[8, 0; 0, -285]</P>
+      <P Name="Dst">514#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">31</P>
+    <P Name="Src">509#out:1</P>
+    <P Name="Points">[88, 0]</P>
+    <Branch>
+      <P Name="ZOrder">32</P>
+      <P Name="Points">[0, 290]</P>
+      <P Name="Dst">511#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">33</P>
+      <P Name="Points">[69, 0; 0, -205]</P>
+      <P Name="Dst">513#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">34</P>
+    <P Name="Src">510#out:1</P>
+    <P Name="Points">[35, 0; 0, -15]</P>
+    <P Name="Dst">537#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">35</P>
+    <P Name="Src">510#out:2</P>
+    <P Name="Dst">538#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">36</P>
+    <P Name="Src">510#out:3</P>
+    <P Name="Points">[35, 0; 0, 5]</P>
+    <P Name="Dst">539#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">37</P>
+    <P Name="Src">511#out:2</P>
+    <P Name="Points">[30, 0; 0, 15]</P>
+    <P Name="Dst">541#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">38</P>
+    <P Name="Src">511#out:1</P>
+    <P Name="Dst">540#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">39</P>
+    <P Name="Src">511#out:3</P>
+    <P Name="Points">[35, 0; 0, 20]</P>
+    <P Name="Dst">542#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">40</P>
+    <P Name="Src">517#out:1</P>
+    <P Name="Dst">508#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">41</P>
+    <P Name="Src">518#out:1</P>
+    <P Name="Dst">509#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">42</P>
+    <P Name="Src">468#out:1</P>
+    <P Name="Points">[110, 0]</P>
+    <Branch>
+      <P Name="ZOrder">43</P>
+      <P Name="Points">[0, 239; 58, 0; 0, -34]</P>
+      <P Name="Dst">519#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">44</P>
+      <P Name="Dst">515#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">45</P>
+    <P Name="Src">474#out:1</P>
+    <P Name="Points">[100, 0]</P>
+    <Branch>
+      <P Name="ZOrder">46</P>
+      <P Name="Points">[0, 195]</P>
+      <P Name="Dst">519#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">47</P>
+      <P Name="Dst">515#in:2</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">48</P>
+    <P Name="Src">480#out:1</P>
+    <P Name="Points">[94, 0]</P>
+    <Branch>
+      <P Name="ZOrder">49</P>
+      <P Name="Points">[0, 185]</P>
+      <P Name="Dst">519#in:3</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">50</P>
+      <P Name="Dst">515#in:3</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">51</P>
+    <P Name="Src">486#out:1</P>
+    <P Name="Points">[83, 0]</P>
+    <Branch>
+      <P Name="ZOrder">52</P>
+      <P Name="Points">[0, 175]</P>
+      <P Name="Dst">519#in:4</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">53</P>
+      <P Name="Dst">515#in:4</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">54</P>
+    <P Name="Src">492#out:1</P>
+    <P Name="Points">[73, 0]</P>
+    <Branch>
+      <P Name="ZOrder">55</P>
+      <P Name="Points">[0, 165]</P>
+      <P Name="Dst">519#in:5</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">56</P>
+      <P Name="Dst">515#in:5</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">57</P>
+    <P Name="Src">498#out:1</P>
+    <P Name="Points">[55, 0]</P>
+    <Branch>
+      <P Name="ZOrder">58</P>
+      <P Name="Points">[0, 155]</P>
+      <P Name="Dst">519#in:6</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">59</P>
+      <P Name="Dst">515#in:6</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">60</P>
+    <P Name="Src">515#out:1</P>
+    <P Name="Dst">516#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">61</P>
+    <P Name="Src">516#out:1</P>
+    <P Name="Dst">545#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">62</P>
+    <P Name="Src">532#out:8</P>
+    <P Name="Dst">534#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">63</P>
+    <P Name="Src">532#out:9</P>
+    <P Name="Dst">535#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">64</P>
+    <P Name="Src">532#out:12</P>
+    <P Name="Dst">536#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">65</P>
+    <P Name="Src">531#out:3</P>
+    <P Name="Points">[10, 0]</P>
+    <P Name="Dst">530#in:1</P>
+  </Line>
+  <Annotation SID="548">
+    <P Name="Name">Based on the QUARC Serial Interfacing Read Binary Demo</P>
+    <P Name="Position">[620, 119, 884, 133]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="HorizontalAlignment">left</P>
+    <P Name="VerticalAlignment">top</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="547">
+    <P Name="Name">QUARC Serial Interfacing Read Text Demo</P>
+    <P Name="Position">[433, 235, 756, 255]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="FontSize">16</P>
+    <P Name="FontWeight">bold</P>
+  </Annotation>
+  <Annotation SID="546">
+    <P Name="Name">To change the communication protocol or options, change the URI parameter
+of the Stream Client block. See the help page of this block for details.</P>
+    <P Name="Position">[423, 262, 766, 288]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="ZOrder">-3</P>
+  </Annotation>
+</System>

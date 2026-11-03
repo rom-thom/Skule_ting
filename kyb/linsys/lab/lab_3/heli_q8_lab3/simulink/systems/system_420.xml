@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">250</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="x_lqr" SID="432">
+    <P Name="Position">[325, 183, 355, 197]</P>
+    <P Name="ZOrder">16</P>
+  </Block>
+  <Block BlockType="Inport" Name="r" SID="433">
+    <P Name="Position">[330, 320, 355, 340]</P>
+    <P Name="ZOrder">17</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Gain" Name="F" SID="427">
+    <P Name="Position">[410, 315, 440, 345]</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Gain">F</P>
+    <P Name="Multiplication">Matrix(K*u)</P>
+  </Block>
+  <Block BlockType="Gain" Name="K" SID="426">
+    <P Name="Position">[410, 175, 440, 205]</P>
+    <P Name="ZOrder">8</P>
+    <P Name="Gain">K</P>
+    <P Name="Multiplication">Matrix(K*u)</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="428">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[505, 250, 525, 270]</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Inputs">-|+</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">u</P>
+    </Port>
+  </Block>
+  <Block BlockType="Outport" Name="u" SID="431">
+    <P Name="Position">[575, 253, 605, 267]</P>
+    <P Name="ZOrder">15</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">432#out:1</P>
+    <P Name="Dst">426#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">426#out:1</P>
+    <P Name="Points">[70, 0]</P>
+    <P Name="Dst">428#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">427#out:1</P>
+    <P Name="Points">[70, 0]</P>
+    <P Name="Dst">428#in:2</P>
+  </Line>
+  <Line>
+    <P Name="Name">u</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">428#out:1</P>
+    <P Name="Dst">431#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">433#out:1</P>
+    <P Name="Dst">427#in:1</P>
+  </Line>
+</System>

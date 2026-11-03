@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">175</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="u" SID="680">
+    <P Name="Position">[950, 488, 980, 502]</P>
+    <P Name="ZOrder">180</P>
+  </Block>
+  <Block BlockType="Inport" Name="x_hat" SID="681">
+    <P Name="Position">[950, 563, 980, 577]</P>
+    <P Name="ZOrder">181</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Inport" Name="r" SID="677">
+    <P Name="Position">[950, 638, 980, 652]</P>
+    <P Name="ZOrder">177</P>
+    <P Name="Port">3</P>
+  </Block>
+  <Block BlockType="Inport" Name="y_m_enc" SID="678">
+    <P Name="Position">[1515, 478, 1545, 492]</P>
+    <P Name="ZOrder">178</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Port">4</P>
+  </Block>
+  <Block BlockType="Inport" Name="y_m" SID="679">
+    <P Name="Position">[1515, 563, 1545, 577]</P>
+    <P Name="ZOrder">179</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Port">5</P>
+  </Block>
+  <Block BlockType="SubSystem" Name="x_hat_scope" SID="683">
+    <P Name="Ports">[3]</P>
+    <P Name="Position">[1210, 519, 1285, 592]</P>
+    <P Name="ZOrder">182</P>
+    <P Name="BackgroundColor">[1.000000, 1.000000, 0.000000]</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <P Name="PortSchema">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;sides&quot;:[{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In1&quot;]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;de9a3278-3bb8-48bc-a002-7b5f5993aac7&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[&quot;In2&quot;,&quot;In3&quot;],&quot;side&quot;:&quot;RIGHT&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;fea5974a-4f03-4326-8662-fa859b8609e1&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;TOP&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;9cde0858-efaf-43ae-a120-bfdf540767e9&quot;},{&quot;content&quot;:{&quot;connectorIds&quot;:[],&quot;side&quot;:&quot;HIDDEN&quot;},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedRectSide&quot;,&quot;uuid&quot;:&quot;8c11840e-d29e-4573-9ae5-6b8bb006d6c2&quot;}]},&quot;type&quot;:&quot;ConnectorPlacement.EquallySpacedConnector&quot;,&quot;uuid&quot;:&quot;74763cd1-8942-46b0-994c-44a8ab401012&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/Connector/R2020b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <System Ref="system_683"/>
+  </Block>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">681#out:1</P>
+    <P Name="Points">[65, 0; 0, -15]</P>
+    <P Name="Dst">683#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">678#out:1</P>
+    <P Name="Points">[-92, 0; 0, 55]</P>
+    <P Name="Dst">683#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">679#out:1</P>
+    <P Name="Points">[-92, 0; 0, 5]</P>
+    <P Name="Dst">683#in:3</P>
+  </Line>
+</System>

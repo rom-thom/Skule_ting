@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">175</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="u" SID="625">
+    <P Name="Position">[268, -35, 282, -5]</P>
+    <P Name="ZOrder">177</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">right</P>
+  </Block>
+  <Block BlockType="Inport" Name="y_m" SID="623">
+    <P Name="Position">[485, 98, 515, 112]</P>
+    <P Name="ZOrder">-1</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Gain" Name="A_ext" SID="631">
+    <P Name="Position">[210, 140, 240, 170]</P>
+    <P Name="ZOrder">183</P>
+    <P Name="Gain">A_ext</P>
+    <P Name="Multiplication">Matrix(K*u)</P>
+  </Block>
+  <Block BlockType="Gain" Name="B" SID="632">
+    <P Name="Position">[260, 30, 290, 60]</P>
+    <P Name="ZOrder">184</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">left</P>
+    <P Name="Gain">B_ext</P>
+    <P Name="Multiplication">Matrix(K*u)</P>
+  </Block>
+  <Block BlockType="Gain" Name="C" SID="630">
+    <P Name="Position">[345, 175, 375, 205]</P>
+    <P Name="ZOrder">182</P>
+    <P Name="Gain">C_ext</P>
+    <P Name="Multiplication">Matrix(K*u)</P>
+  </Block>
+  <Block BlockType="Integrator" Name="Integrator" SID="626">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[115, 90, 145, 120]</P>
+    <P Name="ZOrder">178</P>
+    <P Name="BlockMirror">on</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">x_hat</P>
+    </Port>
+  </Block>
+  <Block BlockType="Gain" Name="L" SID="628">
+    <P Name="Position">[335, 90, 365, 120]</P>
+    <P Name="ZOrder">180</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Gain">L</P>
+    <P Name="Multiplication">Matrix(K*u)</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="627">
+    <P Name="Ports">[3, 1]</P>
+    <P Name="Position">[265, 95, 285, 115]</P>
+    <P Name="ZOrder">179</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Inputs">+++</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">x_hat_dot</P>
+    </Port>
+  </Block>
+  <Block BlockType="Sum" Name="Sum1" SID="629">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[415, 95, 435, 115]</P>
+    <P Name="ZOrder">181</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Inputs">|+-</P>
+  </Block>
+  <Block BlockType="Outport" Name="x_hat" SID="624">
+    <P Name="Position">[-20, 98, 10, 112]</P>
+    <P Name="ZOrder">-2</P>
+    <P Name="BlockMirror">on</P>
+  </Block>
+  <Block BlockType="Outport" Name="x_hat_" SID="682">
+    <P Name="Position">[-20, 143, 10, 157]</P>
+    <P Name="ZOrder">185</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Line>
+    <P Name="Name">x_hat</P>
+    <P Name="ZOrder">8</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">626#out:1</P>
+    <P Name="Points">[-23, 0]</P>
+    <Branch>
+      <P Name="ZOrder">20</P>
+      <P Name="Points">[0, 85; 98, 0]</P>
+      <Branch>
+        <P Name="ZOrder">10</P>
+        <P Name="Points">[0, -35]</P>
+        <P Name="Dst">631#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">9</P>
+        <P Name="Dst">630#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">18</P>
+      <P Name="Points">[-39, 0]</P>
+      <Branch>
+        <P Name="ZOrder">33</P>
+        <P Name="Points">[0, 45]</P>
+        <P Name="Dst">682#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">32</P>
+        <P Name="Dst">624#in:1</P>
+      </Branch>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="Name">x_hat_dot</P>
+    <P Name="ZOrder">13</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">627#out:1</P>
+    <P Name="Dst">626#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">630#out:1</P>
+    <P Name="Points">[45, 0]</P>
+    <P Name="Dst">629#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">623#out:1</P>
+    <P Name="Dst">629#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">11</P>
+    <P Name="Src">631#out:1</P>
+    <P Name="Points">[30, 0]</P>
+    <P Name="Dst">627#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">629#out:1</P>
+    <P Name="Dst">628#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">625#out:1</P>
+    <P Name="Dst">632#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">632#out:1</P>
+    <P Name="Dst">627#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">628#out:1</P>
+    <P Name="Dst">627#in:2</P>
+  </Line>
+</System>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[1912, -8, 3848, 1168]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="stn" SID="521">
+    <P Name="Position">[30, 128, 60, 142]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="EnablePort" Name="Enable" SID="522">
+    <P Name="Ports">[]</P>
+    <P Name="Position">[35, 20, 55, 40]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Block BlockType="Reference" Name="Stream Formatted&#xA;Read" SID="523">
+    <P Name="Ports">[1, 6]</P>
+    <P Name="Position">[90, 83, 205, 182]</P>
+    <P Name="ZOrder">-3</P>
+    <P Name="LibraryVersion">1.2068</P>
+    <P Name="SourceBlock">quarc_library/Communications/Intermediate/Stream Formatted
+Read</P>
+    <P Name="SourceType">Stream Formatted Read</P>
+    <P Name="SourceProductName">QUARC Targets</P>
+    <InstanceData>
+      <P Name="MultiThreadCoSim">auto</P>
+      <P Name="format_string"> %*[^\r]</P>
+      <P Name="max_code_units">80</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator_1" SID="524">
+    <P Name="Position">[220, 90, 230, 100]</P>
+    <P Name="ZOrder">-4</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator_3" SID="525">
+    <P Name="Position">[220, 120, 230, 130]</P>
+    <P Name="ZOrder">-5</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator_4" SID="526">
+    <P Name="Position">[220, 135, 230, 145]</P>
+    <P Name="ZOrder">-6</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator_5" SID="527">
+    <P Name="Position">[220, 150, 230, 160]</P>
+    <P Name="ZOrder">-7</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator_6" SID="528">
+    <P Name="Position">[220, 165, 230, 175]</P>
+    <P Name="ZOrder">-8</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Block BlockType="Terminator" Name="Terminator_7" SID="529">
+    <P Name="Position">[220, 105, 230, 115]</P>
+    <P Name="ZOrder">-9</P>
+    <P Name="ShowName">off</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">521#out:1</P>
+    <P Name="Dst">523#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">523#out:1</P>
+    <P Name="Dst">524#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">523#out:3</P>
+    <P Name="Dst">525#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">523#out:4</P>
+    <P Name="Dst">526#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">523#out:5</P>
+    <P Name="Dst">527#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">523#out:6</P>
+    <P Name="Dst">528#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">523#out:2</P>
+    <P Name="Dst">529#in:1</P>
+  </Line>
+</System>

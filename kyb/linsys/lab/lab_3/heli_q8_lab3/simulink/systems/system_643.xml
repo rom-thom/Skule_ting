@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-8, -8, 2568, 1400]</P>
+  <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
+  <P Name="SetExecutionDomain">off</P>
+  <P Name="ExecutionDomainType">Deduce</P>
+  <P Name="ZoomFactor">250</P>
+  <P Name="SimulinkSubDomain">Simulink</P>
+  <Block BlockType="Inport" Name="x_hat" SID="644">
+    <P Name="Position">[60, 43, 90, 57]</P>
+    <P Name="ZOrder">-1</P>
+  </Block>
+  <Block BlockType="Inport" Name="r" SID="646">
+    <P Name="Position">[60, 153, 90, 167]</P>
+    <P Name="ZOrder">177</P>
+    <P Name="Port">2</P>
+  </Block>
+  <Block BlockType="Integrator" Name="Integrator" SID="648">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[185, 145, 215, 175]</P>
+    <P Name="ZOrder">179</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">gamma_&amp;_zeta</P>
+    </Port>
+  </Block>
+  <Block BlockType="Mux" Name="Mux" SID="647">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[320, -7, 340, 217]</P>
+    <P Name="ZOrder">178</P>
+    <P Name="Inputs">2</P>
+    <P Name="DisplayOption">bar</P>
+  </Block>
+  <Block BlockType="Gain" Name="Selec" SID="651">
+    <P Name="Position">[185, 35, 215, 65]</P>
+    <P Name="ZOrder">182</P>
+    <P Name="Gain">Selec_lqr</P>
+    <P Name="Multiplication">Matrix(K*u)</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">p_&amp;_p_dot_&amp;_e_dot</P>
+    </Port>
+  </Block>
+  <Block BlockType="Gain" Name="Selec2" SID="649">
+    <P Name="Position">[135, 90, 165, 120]</P>
+    <P Name="ZOrder">180</P>
+    <P Name="BlockRotation">270</P>
+    <P Name="BlockMirror">on</P>
+    <P Name="NameLocation">left</P>
+    <P Name="Gain">Selec_integrator</P>
+    <P Name="Multiplication">Matrix(K*u)</P>
+  </Block>
+  <Block BlockType="Sum" Name="Sum" SID="650">
+    <P Name="Ports">[2, 1]</P>
+    <P Name="Position">[140, 150, 160, 170]</P>
+    <P Name="ZOrder">181</P>
+    <P Name="Inputs">-+|</P>
+  </Block>
+  <Block BlockType="Outport" Name="x_lqr" SID="645">
+    <P Name="Position">[385, 98, 415, 112]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="Name">gamma_&amp;_zeta</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">648#out:1</P>
+    <P Name="Dst">647#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">647#out:1</P>
+    <P Name="Dst">645#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">646#out:1</P>
+    <P Name="Dst">650#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">649#out:1</P>
+    <P Name="Dst">650#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">7</P>
+    <P Name="Src">650#out:1</P>
+    <P Name="Dst">648#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">p_&amp;_p_dot_&amp;_e_dot</P>
+    <P Name="ZOrder">8</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">651#out:1</P>
+    <P Name="Dst">647#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">644#out:1</P>
+    <P Name="Points">[55, 0]</P>
+    <Branch>
+      <P Name="ZOrder">11</P>
+      <P Name="Dst">651#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">10</P>
+      <P Name="Dst">649#in:1</P>
+    </Branch>
+  </Line>
+</System>
