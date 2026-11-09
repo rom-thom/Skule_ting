@@ -6,6 +6,8 @@ from scipy.stats import norm
 def corr(theta_1, theta_2):
     return (1 + 15 * np.abs(theta_2 - theta_1)) * np.exp(-15 * np.abs(theta_2 - theta_1))
 
+def cov(theta_1, theta_2, var):
+    return var * corr(theta_1, theta_2)
 
 def a(theta_obs, y_obs):
     grid_vals = np.linspace(0.25, 0.5, 51)
@@ -14,16 +16,16 @@ def a(theta_obs, y_obs):
     mean_obs = np.full(len(theta_obs), 0.5)
 
     # Covariance matrix between grid points, observations, and the two sets.
-    cov_grid = 0.5**2 * corr(grid_vals[:, None], grid_vals[None, :])
-    cov_obs = 0.5**2 * corr(theta_obs[:, None], theta_obs[None, :])
-    cov_cross = 0.5**2 * corr(grid_vals[:, None], theta_obs[None, :])
+    cov_grid = cov(grid_vals[:, None], grid_vals[None, :], 0.5**2)
+    cov_obs = cov(theta_obs[:, None], theta_obs[None, :], 0.5**2)
+    cov_cross = cov(grid_vals[:, None], theta_obs[None, :], 0.5**2)
 
     # Conditional mean and covariance given the observations.
     mean_cond = mean_grid + cov_cross @ np.linalg.solve(cov_obs, y_obs - mean_obs)
     cov_cond = cov_grid - cov_cross @ np.linalg.solve(cov_obs, cov_cross.T)
 
     std_cond = np.sqrt(np.maximum(np.diag(cov_cond), 0))
-    lower = mean_cond - norm.ppf(0.95) * std_cond
+    lower = mean_cond - norm.ppf(0.95) * std_cond # 0.95 instead of 0.9 because that gives 5% on each tail side
     upper = mean_cond + norm.ppf(0.95) * std_cond
 
     plt.figure()
@@ -39,11 +41,10 @@ def a(theta_obs, y_obs):
 
 
 def b(grid_vals, mean_cond, std_cond):
-    # Use the gausian CDF when the point is not known 
+    # The gausian CDF when the point is not known 
     probability = (mean_cond < 0.30).astype(float)
-    uncertain = std_cond > 0
+    uncertain = ~np.isclose(std_cond, 0, atol=1e-7)  # Values not exactly known (as we know that some are known from observations)
     probability[uncertain] = norm.cdf((0.30 - mean_cond[uncertain]) / std_cond[uncertain])
-
     plt.figure()
     plt.plot(grid_vals, probability)
     plt.xlabel(r"$\theta$")
