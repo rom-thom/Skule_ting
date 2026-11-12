@@ -1,4 +1,4 @@
-S = load("data5.mat");
+S = load(fullfile(fileparts(mfilename('fullpath')), 'data', 'data2.mat'));
 
 data = S.ans;
 

@@ -57,7 +57,6 @@ def boris(x_n: np.ndarray, v_n_min_half: np.ndarray, h: float, B: Callable, nabl
     v_mark = v_min + np.cross(v_min, t)
 
 
-
     v_plus = v_min + np.cross(v_mark, s)
     v_n_plus_half = v_plus - h/2 * nabla_U(x_n)
     x_next = x_n + h * v_n_plus_half
@@ -65,8 +64,8 @@ def boris(x_n: np.ndarray, v_n_min_half: np.ndarray, h: float, B: Callable, nabl
     return x_next, v_n_plus_half
 
 
-def multistep(x_init: np.ndarray, t_0, h: float, A: Callable, A_jacobi: Callable, nabla_U: Callable):
-    """Her treng ein dei første 8 x verdiane for å finne den neste
+def multistep(x_init: np.ndarray, h: float, A: Callable, A_jacobi: Callable, nabla_U: Callable):
+    """Her treng ein dei forje 8 x verdiane for å finne den neste
     """
     if len(x_init) != 8:
         raise ValueError("x_init must be accactly the 8 values before the new point")
@@ -89,17 +88,13 @@ def multistep(x_init: np.ndarray, t_0, h: float, A: Callable, A_jacobi: Callable
         return delta(x_surrounding(j))/h
     def A_delta(j):
         return delta(np.array([A(x_j) for x_j in x_surrounding(j)]))/h
-
-    
     def F(j):
         return A_jacobi(x_init[4 + j]).T @ v(j) - A_delta(j) - nabla_U(x_init[4 + j])
     
-
-
-
+    # Dei indeksane va eit herk
     right_side = h**2 * (beta[1] * (F(-1) + F(1)) + beta[0] * F(0))
-
 
     x_next = right_side - sum([alpha[j] * x_init[j] for j in range(8)])
 
     return x_next
+

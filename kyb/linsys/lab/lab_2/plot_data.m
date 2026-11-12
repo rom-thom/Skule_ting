@@ -1,4 +1,4 @@
-S = load("LQR_alle_1.mat");
+S = load("LQR_all_ones.mat");
 
 data = S.ans;
 
